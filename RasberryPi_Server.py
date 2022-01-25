@@ -1,13 +1,22 @@
-from http.server import HTTPServer, BaseHTTPRequestHandler
+"""
+Source
+https://www.youtube.com/watch?v=hFNZ6kdBgO0&ab_channel=howCode
+"""
 
 
-#HOST = 192.168.0.42  #RasberryPI
-HOST = '192.168.0.37'  #Laptop
+"from http.server import HTTPServer, BaseHTTPRequestHandler
+
+
+HOST = '192.168.0.42'  #RasberryPI
+#HOST = '192.168.0.37'  #Laptop
+#HOST = '127.0.0.1'  #Local
+#HOST = 'localhost'
 PORT = 3000
 
 class RP_Server(BaseHTTPRequestHandler):
 
     def do_GET(self):
+        print("Get block: " + str(self) )
         if self.path == '/':
             self.path = '/index.html'
         try:
@@ -20,11 +29,6 @@ class RP_Server(BaseHTTPRequestHandler):
         self.wfile.write(bytes(file_to_open, 'utf-8'))
 
 
-httpd = HTTPServer((HOST, PORT), RP_Server)
-httpd.serve_forever()
-
-
-"""
-Source
-https://www.youtube.com/watch?v=hFNZ6kdBgO0&ab_channel=howCode
-"""
+print("Running server on RasberryPI")
+server = HTTPServer((HOST, PORT), RP_Server)
+server.serve_forever()
