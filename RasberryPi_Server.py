@@ -1,16 +1,17 @@
 """
 Source
 https://www.youtube.com/watch?v=hFNZ6kdBgO0&ab_channel=howCode
+
+login at http://192.168.0.43:3000/index.html
 """
 
 
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
 
-HOST = '192.168.0.42'  #RasberryPI
+HOST = '192.168.0.43'  #RasberryPI wlan1
+#HOST = '192.168.0.37'  #RasberryPI wlan0
 #HOST = '192.168.0.37'  #Laptop
-#HOST = '127.0.0.1'  #Local
-#HOST = 'localhost'
 PORT = 3000
 
 class RP_Server(BaseHTTPRequestHandler):
