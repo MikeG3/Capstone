@@ -4,7 +4,7 @@ https://www.youtube.com/watch?v=hFNZ6kdBgO0&ab_channel=howCode
 """
 
 
-"from http.server import HTTPServer, BaseHTTPRequestHandler
+from http.server import HTTPServer, BaseHTTPRequestHandler
 
 
 HOST = '192.168.0.42'  #RasberryPI
