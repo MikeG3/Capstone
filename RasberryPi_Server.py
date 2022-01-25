@@ -10,7 +10,7 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 
 
 HOST = '192.168.0.43'  #RasberryPI wlan1
-#HOST = '192.168.0.37'  #RasberryPI wlan0
+#HOST = '192.168.0.42'  #RasberryPI wlan0
 #HOST = '192.168.0.37'  #Laptop
 PORT = 3000
 
