@@ -2,7 +2,7 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 
 
 #HOST = 192.168.0.42  #RasberryPI
-HOST = 192.168.0.37  #Laptop
+HOST = '192.168.0.37'  #Laptop
 PORT = 3000
 
 class RP_Server(BaseHTTPRequestHandler):
